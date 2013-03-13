@@ -11,7 +11,7 @@ module Faraday
       when 502
         raise Cashstar::BadGateway.new(error_message(env, "Cashstar is down or being upgraded."), env[:response_headers])
       when 503
-        raise Cashstar::ServiceUnavailable.new(error_message(env, "(__-){ Cashstar is over capacity or a service error occured."), env[:response_headers])
+        raise Cashstar::ServiceUnavailable.new(error_message(env, "Cashstar is over capacity or a service error occured."), env[:response_headers])
       end
     end
 
